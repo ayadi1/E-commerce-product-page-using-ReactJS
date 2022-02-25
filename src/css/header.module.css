@@ -1,0 +1,99 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 2px solid hsl(223, 19%, 93%);
+  height: 100px;
+}
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
+.navList {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+  align-items: center;
+  height: 100%;
+}
+.navItem {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+.navItem:hover {
+  border-bottom: 5px solid var(--Orange);
+}
+.navLink {
+  text-decoration: none;
+  color: hsl(211, 10%, 45%);
+}
+.navLink:hover {
+  cursor: pointer;
+  color: black;
+}
+.navCartList {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.navCart {
+  cursor: pointer;
+}
+.navAvatar {
+  width: 40px;
+  border: 1px solid var(--Orange);
+  border-radius: 50%;
+}
+.hamburgerMenuBtn {
+  display: none;
+}
+.hamburgerMenuBtn img {
+  cursor: pointer;
+}
+/* mobile menu style start */
+.mainHeader {
+  position: relative;
+}
+.mobileNav {
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  padding: 30px;
+  position: absolute;
+  top: 0;
+  left: -370px;
+  width: 370px;
+  height: 100vh;
+  transition: all 0.5s;
+  z-index: 99;
+}
+.navCloseIcon {
+  width: 25px;
+  cursor: pointer;
+}
+.navMenuList {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.navMenuItems a {
+  text-decoration: none;
+  color: hsl(211, 10%, 45%);
+  font-weight: 700;
+}
+/* mobile menu style end */
+
+/* media screen style start */
+@media only screen and (max-width: 721px) {
+  .hamburgerMenuBtn {
+    display: block;
+  }
+  .navList {
+    display: none;
+  }
+}
+/* media screen style end */
