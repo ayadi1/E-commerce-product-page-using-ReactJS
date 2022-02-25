@@ -1,4 +1,11 @@
-# Getting Started with Create React App
+# Frontend Mentor - E-commerce product page
+
+![Design preview for the E-commerce product page coding challenge](./design/desktop-preview.jpg)
+<br />
+
+- live preview link : https://e-commerce-product-page-using-reactjs.netlify.app/
+
+## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
