@@ -23,6 +23,7 @@
 }
 .smallImages img:hover {
   filter: blur(1px);
+  border: 2px solid var(--Orange);
 }
 .infos {
   width: 50%;
@@ -129,6 +130,14 @@
 }
 .IconContainerPreviousImage {
   left: 5%;
+}
+.closeIcon {
+  position: absolute;
+  top: -8px;
+  left: 97%;
+  filter: brightness(0) invert(1);
+  width: 25px;
+  cursor: pointer;
 }
 /* media screen style start */
 @media only screen and (max-width: 721px) {

@@ -19,6 +19,9 @@
 body {
   font-family: "Rubik", sans-serif;
 }
+.App {
+  position: relative;
+}
 .container {
   width: 85%;
   margin: 0 auto;
@@ -35,3 +38,13 @@ footer a {
 .HideMenu {
   left: -370px !important;
 }
+/* display image classes start */
+.showDisplayImage {
+  display: flex !important;
+}
+@media only screen and (max-width: 721px) {
+  .showDisplayImage{
+    display: none!important;
+  }
+}
+/* display image classes end */

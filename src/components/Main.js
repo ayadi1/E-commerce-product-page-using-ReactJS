@@ -2,11 +2,11 @@ import styles from "../css/main.module.css";
 import ImageList from "./ImageList";
 import InputActions from "./InputActions";
 
-export default function Main({ productCount, sub, add }) {
+export default function Main({ productCount, sub, add, showProduct }) {
   return (
     <div className="container">
       <main className={styles.main}>
-        <ImageList />
+        <ImageList showProduct={showProduct} isInDisplayProduct={false} />
         <div className={styles.infos}>
           <h3>SNEAKER COMPANY</h3>
           <h2>Fall Limited Edition Sneakers</h2>

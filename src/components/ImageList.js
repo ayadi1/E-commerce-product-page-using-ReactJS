@@ -1,7 +1,7 @@
 import { useState } from "react";
 import styles from "../css/main.module.css";
 
-export default function ImageList() {
+export default function ImageList({ isInDisplayProduct, showProduct }) {
   const [selectedImage, setSelectedImage] = useState(1);
 
   const updateMainImage = (id) => {
@@ -22,10 +22,19 @@ export default function ImageList() {
       setSelectedImage((old) => --old);
     }
   };
+  const showDisplayImage = () => {
+    if (!isInDisplayProduct && showProduct) {
+      showProduct();
+    }
+  };
   return (
     <div className={styles.images}>
       <div className={styles.bigImage}>
-        <img alt="" src={`./images/image-product-${selectedImage}.jpg`} />
+        <img
+          alt=""
+          src={`./images/image-product-${selectedImage}.jpg`}
+          onClick={showDisplayImage}
+        />
       </div>
       <div className={styles.smallImages}>
         <img
@@ -62,6 +71,14 @@ export default function ImageList() {
           className={styles.previousImage}
         />
       </div>
+      {isInDisplayProduct && (
+        <img
+          alt=""
+          src="./images/icon-close.svg"
+          className={styles.closeIcon}
+          onClick={showProduct}
+        />
+      )}
     </div>
   );
 }
